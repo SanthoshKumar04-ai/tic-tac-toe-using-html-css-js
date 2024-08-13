@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F4F269", endColorstr="#5CB270", GradientType=1 );
+    font-size: 3rem;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background: linear-gradient(90deg, hsla(332, 53%, 82%, 1) 0%, hsla(176, 57%, 89%, 1) 100%);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #2e2e2e33;
+    transform: scale(1.1);
+}
+
+.cell.x::after {
+    content: 'X';
+    color: darkmagenta;
+}
+
+.cell.o::after {
+    content: 'O';
+    color: darkgoldenrod;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #000000;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    display: block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    background: linear-gradient(90deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 100%);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#restart-btn:hover {
+    background: linear-gradient(270deg, hsla(270, 94%, 25%, 1) 0%, hsla(158, 94%, 49%, 1) 53%);
+    color: darkblue;
+}
